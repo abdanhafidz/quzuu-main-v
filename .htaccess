@@ -1,0 +1,13 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1
+# remove spaces from start or after /
+RewriteRule ^(.*/|)[\s%20]+(.+)$ $1$2 [L]
+
+# remove spaces from end or before /
+RewriteRule ^(.+?)[\s%20]+(/.*|)$ $1$2 [L]
+
+# replace spaces by - in between
+RewriteRule ^([^\s%20]*)(?:\s|%20)+(.*)$ $1-$2 [L,R]
