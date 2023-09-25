@@ -5,7 +5,7 @@
 // Please Donate Me https://abdanhafidz.com/donate
 $server = 'localhost'; //server database ex:Localhost
 $username = 'root'; //username database ex:root
-$password = 'Fpi558585';//password database ex:12345
-$name  = 'quzuu';//nama database ex:databasesaya
+$password = '';//password database ex:12345
+$name  = '';//nama database ex:databasesaya
 $db_con = mysqli_connect($server,$username,$password,$name);
 mysqli_set_charset($db_con,"utf8mb4");
